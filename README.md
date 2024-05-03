@@ -45,6 +45,8 @@ make4.1+ perl python3.6+ rsync subversion unzip which
 4. Run `make` to build your firmware. This will download all sources, build the
    cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen
    applications for your target system.
+5. If you get an error that '../bin/ is not a directory'. workaround for this issue was to run 'make', let it fail, check to see if /bin/ exists, if not create it, then locate '/bin/targets/tr6560/generic/TR6560-bootimage.bin' and copy to '/bin/'
+   however, this is only needed if you need the fullimage.bin, as sysupgrade.bin will be in /bin/targets/tr6560/generic/TR6560-bootimage.bin before the '../bin/ is not a directory' failure.
 
 ### Related Repositories
 
